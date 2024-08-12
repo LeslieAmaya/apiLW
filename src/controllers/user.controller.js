@@ -24,7 +24,7 @@ exports.registerUser = async (req, res) => {
         name: userData.name,
         lastname: userData.lastname,
         password: userData.password,
-        type: userData.type
+        rol: userData.rol
     });
     await newUser
         .save()
@@ -42,7 +42,7 @@ exports.updateUser = async (req, res) => {
             name: userData.name, 
             lastname: userData.lastname, 
             password:userData.password, 
-            type: userData.type 
+            rol: userData.rol
         } })
         .then((data) => res.json(data)) //responde con los datos en caso de que se elimine
         .catch((error) => res.json({ message: error })); //nos devuelve el error en caso de que lo hubiera

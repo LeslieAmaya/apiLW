@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     rol: {
-        type: Int32Array,
+        type: Number,
         required: true
     }
 }); //
