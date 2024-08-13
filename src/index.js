@@ -10,7 +10,7 @@ app.use("/api", router);
 
 try {
   mongoose.connect(
-    "mongodb+srv://UsuarioPrueba:UsuarioPrueba@miprimercluster.rix6jne.mongodb.net/LevelWater2"
+    "mongodb+srv://UsuarioPrueba:UsuarioPrueba@miprimercluster.rix6jne.mongodb.net/LevelWater"
     // después del "/" poner la base de datos que vas a usar
   );
   console.log("Si está conectado");

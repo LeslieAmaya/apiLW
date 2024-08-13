@@ -26,13 +26,13 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
-const nuevoUsuario = new User({
-    username:"Les",
-    name: "Leslie",
-    lastname: "Amaya",
-    password:"1234",
-    rol: 0
-});
+// const nuevoUsuario = new User({
+//     username:"Les",
+//     name: "Leslie",
+//     lastname: "Amaya",
+//     password:"1234",
+//     rol: 0
+// });
 
 const creaUsuario = async (req, res) => {
     await nuevoUsuario.save();
