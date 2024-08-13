@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const login = require("../controllers/login");
+const login = require("../controllers/login.controller");
 const userController = require("../controllers/user.controller");
 const infectedController = require("../controllers/infected.controller");
 const stateController = require("../controllers/state.controller");
