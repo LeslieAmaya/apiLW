@@ -13,4 +13,7 @@ router.put("/user/:id", userController.updateUser);
 // get obtener los datos de la base de datos
 // post enviar los datos a la base de datos
 
+router.get("/consume")
+router.get("/nivel")
+
 module.exports = router;
