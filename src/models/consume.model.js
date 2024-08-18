@@ -1,24 +1,23 @@
-const mongoose = require('mongoose'); 
-// import mongoose from 'mongoose'; ES LO MISMO
-const userSchema = new mongoose.Schema({
+const mongoose = require('mongoose');
+const moment = require('moment');
+
+const consumeSchema = new mongoose.Schema({
     Fecha: {
-        type: Date,
-        unique: true,
+        type: String, // Cambié a String para almacenar la fecha formateada
     },
     Consumo: {
         type: Number,
     }
-}); //
+});
 
-const Consumo = mongoose.model('Consumo', userSchema);
+// Middleware para formatear la fecha antes de guardarla
+consumeSchema.pre('save', function(next) {
+    if (this.isModified('Fecha') || this.isNew) {
+        this.Fecha = moment(this.Fecha).format('YYYY-MM-DD HH:mm:ss');
+    }
+    next();
+});
 
-// const nuevoUsuario = new User({
-//     username:"Les",
-//     name: "Leslie",
-//     lastname: "Amaya",
-//     password:"1234",
-//     rol: 0
-// });
+const Consume = mongoose.model('Consume', consumeSchema);
 
-module.exports = Consumo;
-// module.exports = {User /*, creaUsuario*/ };
+module.exports = Consume;

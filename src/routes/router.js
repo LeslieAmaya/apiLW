@@ -1,6 +1,8 @@
 const { Router } = require("express");
 const login = require("../controllers/login.controller");
 const userController = require("../controllers/user.controller");
+const nivelController = require("../controllers/nivel.controller");
+const consumeController = require ("../controllers/consume.controller");
 
 const router = Router();
 //http://localhost/api/login - post {username: "Isael", password: "Isael123" }
@@ -13,7 +15,13 @@ router.put("/user/:id", userController.updateUser);
 // get obtener los datos de la base de datos
 // post enviar los datos a la base de datos
 
-router.get("/consume")
-router.get("/nivel")
+//LECTURAS
+router.get("/consume", consumeController.getConsume)
+router.post("/consume", consumeController.createConsume)
+
+router.get("/nivel", nivelController.getNivel)
+router.post("/nivel", nivelController.createNivel)
+router.put("/nivel/:id", nivelController.updateNivel)
+
 
 module.exports = router;
