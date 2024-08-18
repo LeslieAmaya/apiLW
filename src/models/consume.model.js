@@ -19,13 +19,13 @@ consumeSchema.pre('save', function(next) {
 });
 
 const Consume = mongoose.model('Consume', consumeSchema);
-const nuevoConsumo = new Consume({
+/* const nuevoConsumo = new Consume({
     Fecha:"2024/05/10 10:20:35",
     Consumo:"3"
 });
 
 const creaConsumo = async (req, res) => {
     await nuevoConsumo.save();
-} 
+} */
 module.exports = Consume;
-module.exports = {Consume, creaConsumo };
+// module.exports = {Consume, creaConsumo };
