@@ -16,12 +16,12 @@ router.put("/user/:id", userController.updateUser);
 // post enviar los datos a la base de datos
 
 //LECTURAS
-router.get("/consume", consumeController.getConsume)
-router.post("/consume", consumeController.createConsume)
+router.get("/consume", consumeController.getConsume);
+router.post("/consume", consumeController.createConsume);
 
-router.get("/nivel", nivelController.getNivel)
-router.post("/nivel", nivelController.createNivel)
-router.put("/nivel/:id", nivelController.updateNivel)
+router.get("/nivel", nivelController.getNivel);
+router.post("/nivel", nivelController.createNivel);
+router.put("/nivel/:id", nivelController.updateNivel);
 
 
 module.exports = router;

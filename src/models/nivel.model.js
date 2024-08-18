@@ -1,6 +1,6 @@
 const mongoose = require('mongoose'); 
 // import mongoose from 'mongoose'; ES LO MISMO
-const userSchema = new mongoose.Schema({
+const nivelSchema = new mongoose.Schema({
     Porcentaje: { //
         type: Number,
     },
@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
     
 }); //
 
-const Nivel = mongoose.model('Nivel', userSchema);
+const Nivel = mongoose.model('Nivel', nivelSchema);
 
 
 module.exports = Nivel;
