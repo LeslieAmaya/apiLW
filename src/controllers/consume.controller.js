@@ -23,7 +23,7 @@ exports.createConsume = async (req, res) => {
         return res.status(400).json({ message: "Fecha inválida" });
     }
 
-    // Validar que Consumo sea un número y mayor o igual a 0
+    // Validar que Consumo sea un número y positivo
     if (typeof consumo !== 'number' || consumo < 0) {
         return res.status(400).json({ message: "Consumo debe ser un número positivo" });
     }

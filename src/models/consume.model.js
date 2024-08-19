@@ -5,9 +5,10 @@ const consumeSchema = new mongoose.Schema({
     Fecha: {
         type: String, // Cambié a String para almacenar la fecha formateada
     },
-    Consumo: {
-        type: Number,
-    }
+    consumo: { 
+        type: Number, 
+        required: true, 
+        min: 0 }
 });
 
 // Middleware para formatear la fecha antes de guardarla
