@@ -5,7 +5,7 @@ const consumeSchema = new mongoose.Schema({
     Fecha: {
         type: String, // Cambié a String para almacenar la fecha formateada
     },
-    Consumo: { 
+    consumo: { 
         type: Number, 
         required: true, 
         min: 0 }
