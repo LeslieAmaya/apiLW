@@ -13,7 +13,7 @@ exports.createConsume = async (req, res) => {
     const { Fecha, Consumo } = req.body;
 
     // Validación de los datos
-    if (!Fecha,  !Consumo && Consumo !== 0) {
+    if (!Fecha,  !Consumo && Consumo === 0) {
         return res.status(400).json({ message: "Fecha y Consumo son requeridos" });
     }
 
