@@ -13,7 +13,7 @@ exports.createConsume = async (req, res) => {
     const { fecha, consumo } = req.body;
 
     // Validación de los datos
-    if (!fecha,  !consumo && consumo === 0) {
+    if (!fecha || (consumo === undefined || consumo === null)) {
         return res.status(400).json({ message: "Fecha y Consumo son requeridos" });
     }
 
@@ -23,8 +23,8 @@ exports.createConsume = async (req, res) => {
         return res.status(400).json({ message: "Fecha inválida" });
     }
 
-    // Validar que Consumo sea un número
-    if (typeof consumo !== 'number',  consumo < 0) {
+    // Validar que Consumo sea un número y mayor o igual a 0
+    if (typeof consumo !== 'number' || consumo < 0) {
         return res.status(400).json({ message: "Consumo debe ser un número positivo" });
     }
 
