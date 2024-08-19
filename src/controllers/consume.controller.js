@@ -18,7 +18,7 @@ exports.createConsume = async (req, res) => {
     }
 
     // Validar que la fecha sea válida
-    const parsedFecha = Date.parse(Fecha);
+    const parsedFecha = Date.parse(fecha);
     if (isNaN(parsedFecha)) {
         return res.status(400).json({ message: "Fecha inválida" });
     }
