@@ -8,7 +8,8 @@ exports.login = async (req, res) => { //Espera peticion y devuelve respuesta
         const user = await User.findOne({username});
         /* creaUsuario(); */
         if (user && (password == user.password)){
-            res.send({ username, password, rol:user.rol });
+            const rol = user.rol
+            res.send({ username, password, rol});
             console.log({user});
         } else {
             res.status(501).json({message: "Usuario o contraseña incorrecta"})
