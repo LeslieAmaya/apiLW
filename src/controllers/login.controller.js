@@ -1,7 +1,7 @@
 const  User = require('../models/user.model');
 
 exports.login = async (req, res) => { //Espera peticion y devuelve respuesta
-    const {username, password, rol } = req.body;
+    const {username, password} = req.body;
     console.log(req.body);
 
     try{
